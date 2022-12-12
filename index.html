@@ -81,7 +81,7 @@
 			alert("You cannot 'open' this file in your browser, the code doesn't work. Upload this folder to your HTTP(s) server and access it via the internet to launch the stable-download game. This is not a bug, please read the documentation.");
 		} else {
 			var PackSelect = document.getElementById("Packs");
-            var CodeSelect = document.getElementById("Codes");
+            var CodeSelect = document.getElementById("code");
 			function Start() {
 				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == "CoolFunnyCodesJPG") {
 					var Selected = PackSelect.options[PackSelect.selectedIndex].value;
