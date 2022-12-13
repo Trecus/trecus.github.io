@@ -82,8 +82,9 @@
 		} else {
 			var PackSelect = document.getElementById("Packs");
             var CodeSelect = document.getElementById("code");
+			var code = "Maryvale1sC00l"
 			function Start() {
-				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == "Maryvale1sC00l") {
+				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == code) {
 					var Selected = PackSelect.options[PackSelect.selectedIndex].value;
 					document.getElementById("Selection").style.display = "none";
 					localStorage.LastPack = Selected;
@@ -108,7 +109,7 @@
 							{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
 						],
 						mainMenu: {
-							splashes: [], eaglerLogo: false
+							splashes: ["number 1 hit music station", "eaglercraft is cool", "mecrosooft"], eaglerLogo: false
 						}
 					};
 					(function () {
@@ -120,7 +121,7 @@
 						}
 					})();
 					main();
-				} else if (CodeSelect.value != "Maryvale1sC00l") {
+				} else if (CodeSelect.value != code) {
 					alert("Incorrect Code!"); } 
 					else {
 					alert("You need to select a pack!")
