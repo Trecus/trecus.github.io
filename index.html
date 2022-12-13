@@ -83,7 +83,7 @@
 			var PackSelect = document.getElementById("Packs");
             var CodeSelect = document.getElementById("code");
 			function Start() {
-				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == "CoolFunnyCodesJPG") {
+				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == "Maryvale1sC00l") {
 					var Selected = PackSelect.options[PackSelect.selectedIndex].value;
 					document.getElementById("Selection").style.display = "none";
 					localStorage.LastPack = Selected;
@@ -120,8 +120,11 @@
 						}
 					})();
 					main();
-				} else
-					alert("You need to select a pack");
+				} else if (CodeSelect.value != "Maryvale1sC00l") {
+					alert("Incorrect Code!"); } 
+					else {
+					alert("You need to select a pack!")
+				}
 			}
 		}
 		if (localStorage.LastPack)
