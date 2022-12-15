@@ -85,7 +85,7 @@
 			var code = "fallGuysbattlePass"
 			var ethanCode = "EthanKeepThisSecret"
 			function Start() {
-				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == code ||  CodeSelect.value == ethanCode) {
+				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == code ||  CodeSelect.value == ethanCode && PackSelect.selectedIndex !== 0) {
 					var Selected = PackSelect.options[PackSelect.selectedIndex].value;
 					document.getElementById("Selection").style.display = "none";
 					localStorage.LastPack = Selected;
@@ -95,14 +95,15 @@
 						assetsURI: `packs/${Selected}.epk`,
 						serverWorkerURI: "worker_bootstrap.js",
 						worldsFolder: "MAIN",
-						servers: [
+						servers: [/*
 							{ serverName: "A*spixel", serverAddress: "wss://web.asspixel.net/CAPixel/", hideAddress: true },
 							{ serverName: "VanillaCraft", serverAddress: "wss://play.vanillacraftsmp.org/", hideAddress: true },
 							{ serverName: "ArchMC", serverAddress: "wss://web.arch.lol/join", hideAddress: true },
 							{ serverName: "Hyper Network", serverAddress: "wss://hyper-network.me", hideAddress: true },
 							{ serverName: "Ayunboom", serverAddress: "wss://sus.shhnowisnottheti.me", hideAddress: true },
 							{ serverName: "Aeon Network", serverAddress: "wss://aeon-network.net/aeon", hideAddress: true },
-							{ serverName: "Sealcraft", serverAddress: "wss://sealcraft.ddns.net:442/servers", hideAddress: true }
+							{ serverName: "Sealcraft", serverAddress: "wss://sealcraft.ddns.net:442/servers", hideAddress: true } */
+							{ serverName: "All Major Servers are blocked!", serverAddress: "All Majors Are Blocked!", hideAddress: true }
 						],
 						relays: [
 							{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
@@ -110,7 +111,7 @@
 							{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
 						],
 						mainMenu: {
-							splashes: ["number 1 hit music station", "eaglercraft is cool", "mecrosooft"], eaglerLogo: false
+							splashes: ["number 1 hit music station", "eaglercraft is cool", "mecrosooft", "..."], eaglerLogo: false
 						}
 					};
 					(function () {
