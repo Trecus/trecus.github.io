@@ -83,8 +83,9 @@
 			var PackSelect = document.getElementById("Packs");
             var CodeSelect = document.getElementById("code");
 			var code = "fallGuysbattlePass"
+			var ethanCode = "EthanKeepThisSecret"
 			function Start() {
-				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == code) {
+				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == code ||  CodeSelect.value == ethanCode) {
 					var Selected = PackSelect.options[PackSelect.selectedIndex].value;
 					document.getElementById("Selection").style.display = "none";
 					localStorage.LastPack = Selected;
@@ -121,7 +122,7 @@
 						}
 					})();
 					main();
-				} else if (CodeSelect.value != code) {
+				} else if (CodeSelect.value != code || CodeSelect.value != ethanCode) {
 					alert("Incorrect Code!"); } 
 					else {
 					alert("You need to select a pack!")
