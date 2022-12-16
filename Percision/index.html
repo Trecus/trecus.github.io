@@ -56,7 +56,8 @@
 				background-repeat: no-repeat;
 			}
 		</style>
-		<h1>Precision Client</h1>
+		<h1>MV Client: Client for School</h1>
+		<h1>Modified Precision Client</h3>
 		<h3>Select a texture pack:</h3>
 		<select id="Packs" class="dropdown">
 			<option>-- Choose one --</option>
@@ -71,8 +72,9 @@
 			<option value="tightfault">Tightfault</option>
 			<option value="walifault">Walifault</option>
 		</select>
-        <br>
-        <input type="text" id="code" name="lname">
+        <br><br>
+		<h3>Enter Code:</h3>
+        <input class="starter" type="text" id="code" name="code">
 		<br /><br />
 		<input class="starter" type="button" value="Launch" onclick="Start();" />
 	</div>
@@ -83,7 +85,7 @@
 			var PackSelect = document.getElementById("Packs");
             var CodeSelect = document.getElementById("code");
 			var code = "WeSpeakAboutTheDrill"
-			var ethanCode = "EthanKeepThisSecret"
+			var ethanCode = "OtterGudYes"
 			function Start() {
 				if (PackSelect.selectedIndex !== 0 && CodeSelect.value == code ||  CodeSelect.value == ethanCode && PackSelect.selectedIndex !== 0) {
 					var Selected = PackSelect.options[PackSelect.selectedIndex].value;
